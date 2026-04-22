@@ -1,6 +1,5 @@
 name: Build APK
 
-# 触发条件：推送到main分支自动构建
 on:
   push:
     branches: [ main ]
@@ -11,11 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. 拉取仓库代码
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 安装JDK 17（最新Android SDK强制要求）
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -23,22 +20,16 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      # 3. 配置Android SDK（适配v3新版本参数）
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
           packages: 'platform-tools platforms;android-34 build-tools;34.0.0'
           accept-android-sdk-licenses: true
 
-      # 4. 给Gradle执行权限
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      # 5. 构建Debug APK
+      # 直接用系统Gradle构建，跳过gradlew
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
-      # 6. 上传APK（v4最新版本）
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
