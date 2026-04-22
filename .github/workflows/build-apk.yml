@@ -15,23 +15,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 安装JDK 11（Android构建必须）
-      - name: Set up JDK 11
+      # 2. 安装JDK 17（最新Android SDK强制要求）
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
           cache: gradle
 
-      # 3. 配置Android SDK环境
+      # 3. 配置Android SDK（适配v3新版本参数）
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          api-level: 34
-          build-tools: '34.0.0'
-          channel: stable
+          packages: 'platform-tools platforms;android-34 build-tools;34.0.0'
+          accept-android-sdk-licenses: true
 
-      # 4. 给Gradle执行权限（Linux环境必须）
+      # 4. 给Gradle执行权限
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
@@ -39,7 +38,7 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
-      # 6. 上传APK作为构建产物（已更新为v4最新版本）
+      # 6. 上传APK（v4最新版本）
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
