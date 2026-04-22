@@ -246,3 +246,36 @@ This app teaches users grammar through:
 **Ready to build!** 🚀
 
 This Grammar Checker app is designed to help users improve their English grammar through interactive practice and immediate feedback. The floating window makes it accessible from any app, while the dual-mode system caters to both learning and productivity needs.
+=======
+# grammar-checker
+# Grammar Checker Android App
+
+🚀 **智能语法检查浮窗工具** 
+
+## ✨ 功能特点
+- 🔍 实时语法错误检测
+- 🎓 练习模式：红标错误，用户自行修正
+- ⚡ 自动修正模式：一键获取正确文本
+- 🌍 中英文界面切换
+- 🎉 成功动画：绿色滑动 + 彩色纸屑
+- 📋 复制功能：一键复制修正后的文本
+
+## 🎯 使用场景
+- 英文写作时实时检查语法
+- 学习英语语法知识
+- 提高写作质量
+
+## 🛠 技术栈
+- Kotlin 1.8.0
+- Android SDK 34
+- Material Design 3
+- Gradle 7.5
+
+## 📦 构建
+由GitHub Actions自动构建，确保最新版本可用性。
+
+---
+
+*自动构建时间：约15分钟*
+*APK大小：约4-6MB*
+>>>>>>> 2b47a7aad492c32269cb577c7a001643cf6177cd
