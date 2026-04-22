@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Grammar Checker</string>
+    
+    <!-- Main Activity -->
+    <string name="start_checker">Start Grammar Checker</string>
+    <string name="stop_checker">Stop Grammar Checker</string>
+    <string name="floating_window_active">Floating window active</string>
+    
+    <!-- Grammar Checker -->
+    <string name="mode_selection">Select Mode</string>
+    <string name="practice_mode">Practice Mode</string>
+    <string name="auto_mode">Auto Correct Mode</string>
+    <string name="practice_mode_desc">Red highlights let you fix errors yourself. Correct answers turn green with animations!</string>
+    <string name="auto_mode_desc">Get suggestions and copy corrected text with one click</string>
+    
+    <!-- Language Toggle -->
+    <string name="english">EN</string>
+    <string name="chinese">中文</string>
+    
+    <!-- Grammar Errors -->
+    <string name="grammar_error">Grammar Error</string>
+    <string name="spelling_error">Spelling Error</string>
+    <string name="punctuation_error">Punctuation Error</string>
+    
+    <!-- Grammar Checker Error Messages -->
+    <string name="error_subject_verb">Subject-verb disagreement</string>
+    <string name="error_article_missing">Missing article</string>
+    <string name="error_preposition">Wrong preposition</string>
+    <string name="error_plural">Incorrect plural form</string>
+    <string name="error_tense">Wrong tense</string>
+    <string name="error_spelling">Spelling mistake</string>
+    
+    <!-- Grammar Checker Chinese Translations -->
+    <string name="error_subject_verb_cn">主谓不一致</string>
+    <string name="error_article_missing_cn">缺少冠词</string>
+    <string name="error_preposition_cn">介词错误</string>
+    <string name="error_plural_cn">复数形式错误</string>
+    <string name="error_tense_cn">时态错误</string>
+    <string name="error_spelling_cn">拼写错误</string>
+    
+    <!-- Actions -->
+    <string name="copy_correction">Copy Correction</string>
+    <string name="correct_here">Correct Here</string>
+    <string name="ignore">Ignore</string>
+    <string name="got_it">Got it!</string>
+    
+    <!-- Feedback -->
+    <string name="correct_answer">Correct! 🎉</string>
+    <string name="try_again">Try again</string>
+    <string name="well_done">Well done!</string>
+    
+</resources>
