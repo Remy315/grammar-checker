@@ -18,7 +18,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
+
+      # 关键！指定和你项目兼容的旧版 Gradle（7.5，最稳）
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '7.5'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
@@ -26,7 +31,7 @@ jobs:
           packages: 'platform-tools platforms;android-34 build-tools;34.0.0'
           accept-android-sdk-licenses: true
 
-      # 直接用系统Gradle构建，跳过gradlew
+      # 用指定版本的 Gradle 构建，跳过 gradlew
       - name: Build Debug APK
         run: gradle assembleDebug
 
